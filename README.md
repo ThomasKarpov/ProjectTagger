@@ -1,7 +1,7 @@
 # ProjectAlpha
 
 # Other related Sites 
-[HackNPlan](https://app.hacknplan.com/p/117592/kanban?categoryId=0&boardId=305287)
-[Google Drive](https://drive.google.com/drive/folders/1oTQCZ6Nw042xRN5k68W_nSA-jS8qKp4-)
+- [HacknPlan](https://app.hacknplan.com/p/117592/kanban?categoryId=0&boardId=305287)
+- [Google Drive](https://drive.google.com/drive/folders/1oTQCZ6Nw042xRN5k68W_nSA-jS8qKp4-)
 
  
