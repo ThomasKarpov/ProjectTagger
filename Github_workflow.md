@@ -17,6 +17,10 @@
 Congratulations, you have now sucessully cloned the repository from the the server to you local PC.
     
 ### 2. Get and merge updates into your local branch
+- Fetch from origin using button 'Fetch origin' on typ bar to see if changes exist
+    - if new changes exist, hit the pull button to download them to your PC.
+
+Your local branch is now up to date to the one on the server.
 
 ### 3. Send updates from your branch to master
 - View your changes in the changes tab on the left hand side. You can see which files have been changed and also preview the changes on the right hand side.
