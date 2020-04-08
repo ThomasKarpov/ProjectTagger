@@ -25,7 +25,9 @@ Your local branch is now up to date to the one on the server.
 ### 3. Send updates from your branch to master
 - View your changes in the changes tab on the left hand side. You can see which files have been changed and also preview the changes on the right hand side.
 - Press commit and add a descriptive text about what has changed in this commit.
-- Push changes to server with push button on top bar.
+- Push local changes to server with push button on top bar.
+
+Now go to Github and create a New pull request and choose master as bae and your branch as compare. This displays all the changes, click create. After this, other member can see you pull request and you or others can confirm the merge. After this, the changes will be transfered to the master branch.
 
 ## Using Gitbash
 [Installation](https://gitforwindows.org/)
