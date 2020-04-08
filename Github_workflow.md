@@ -20,6 +20,8 @@ Congratulations, you have now sucessully cloned the repository from the the serv
 
 ### 3. Send updates from your branch to master
 - View your changes in the changes tab on the left hand side. You can see which files have been changed and also preview the changes on the right hand side.
+- Press commit and add a descriptive text about what has changed in this commit.
+- Push changes to server with push button on top bar.
 
 ## Using Gitbash
 [Installation](https://gitforwindows.org/)
