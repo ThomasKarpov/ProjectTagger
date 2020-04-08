@@ -6,24 +6,9 @@
 - Merge master content into your branch using `git merge origin/master`.
 - when prompted, complete merge by typing :wq (write & quit) then enter.
 
-## Send U
+## Send updates from your branch to master
+- Add files for committing using `git add .` (adds all changed files in current folder location and all its children).
+- Commit changes using `git commit "This commit message describes the commit"`.
+- push local changes to server using `git push`.
 
-## Fetch updates
-**Command**: `Git pull`
-
-![gitpullimage](./MD_Files/git_pull.png)
-
-## Navigating between branches
-> Git checkout BranchName
-
-![gitcheckoutbranchimage](./MD_Files/git_checkout.png)
-
-
-## Create your own branch to using the following command
-> Git checkout *-b YourBranchName* 
-
-## Check status of branch
-Checks the status of the active branch, shows what has been changed, added and commited.
-> Git status
-
-
+Now go to Github and create a [New pull request](https://github.com/Luffiez/ProjectAlpha/pulls) and choose master as bae and your branch as compare. This displays all the changes, click create. After this, other member can see you pull request and you or others can confirm the merge. After this, the changes will be transfered to the master branch.
