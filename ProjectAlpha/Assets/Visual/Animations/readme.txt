@@ -1,1 +1,0 @@
-Animations go in this folder

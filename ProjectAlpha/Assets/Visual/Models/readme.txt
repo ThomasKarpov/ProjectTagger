@@ -1,1 +1,0 @@
-3D models assets go in this folder
