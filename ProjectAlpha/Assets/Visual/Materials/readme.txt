@@ -1,1 +1,0 @@
-Materials assets go in this folder
