@@ -13,7 +13,7 @@ public class CharacterController : MonoBehaviour
 
 
 
-    private Rigidbody rb;
+    private CharacterController cc;
     private Animator anim;
     private NetworkIdentity netID;
     private bool isGrounded;
@@ -32,7 +32,7 @@ public class CharacterController : MonoBehaviour
             characterNameText.text = "You";
         }
 
-        rb = GetComponent<Rigidbody>();
+        cc = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
     }
 
@@ -59,22 +59,21 @@ public class CharacterController : MonoBehaviour
     void Jump()
     {
         anim.SetTrigger("Jump");
-        rb.velocity = new Vector2(rb.velocity.x, 0);
-        rb.AddForce(transform.up * characterJumpForce, ForceMode.Impulse);
+        cc.Jump();
     }
 
     void MoveCharacter(float h)
     {
-        Vector2 velocity = new Vector2(h * characterSpeed, rb.velocity.y);
-        rb.velocity = velocity;
+        //Vector2 velocity = new Vector2(h * characterSpeed, cc.characterSpeed rb.velocity.y);
+        //rb.velocity = velocity;
 
-        if((velocity.x > 0 && !isFacingRight) ||
-            (velocity.x < 0 && isFacingRight))
-        {
-            Flip();
-        }
+        //if((velocity.x > 0 && !isFacingRight) ||
+        //    (velocity.x < 0 && isFacingRight))
+        //{
+        //    Flip();
+        //}
 
-        anim.SetFloat("Speed", Mathf.Abs(velocity.x));
+        //anim.SetFloat("Speed", Mathf.Abs(velocity.x));
     }
 
     void Flip()

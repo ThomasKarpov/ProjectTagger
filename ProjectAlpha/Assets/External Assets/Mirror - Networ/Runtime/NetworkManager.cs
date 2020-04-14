@@ -215,8 +215,6 @@ namespace Mirror
             // Don't allow collision-destroyed second instance to continue.
             if (!InitializeSingleton()) return;
 
-            Debug.Log("Thank you for using Mirror! https://mirror-networking.com");
-
             // Set the networkSceneName to prevent a scene reload
             // if client connection to server fails.
             networkSceneName = offlineScene;
