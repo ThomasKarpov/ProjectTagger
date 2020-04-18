@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{CC05ABDD-116D-B2EF-1085-8FFFB78D8259}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/InputSystem/Events.cs">
+    <Files>
+      <File FileName="Assets/Scripts/InputSystem/GameManager.cs" Line="2" Column="1" />
+      <File FileName="Assets/Scripts/InputSystem/BaseContext.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/InputSystem/ContextManager.cs" Line="7" Column="26" />
+      <File FileName="Assets/Scripts/InputSystem/GameplayContext.cs" Line="5" Column="61" />
+      <File FileName="Assets/Scripts/InputSystem/MenuContext.cs" Line="5" Column="56" />
+      <File FileName="Assets/Scripts/InputSystem/InputMonitor.cs" Line="6" Column="30" />
+      <File FileName="Assets/Scripts/InputSystem/Events.cs" Line="5" Column="22" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ProjectAlpha" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="InputSystem" expanded="True">
+                  <Node name="Events.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c3e29243-ec02-46ed-90ea-5d4c9b08f310" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
