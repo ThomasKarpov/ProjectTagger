@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:ProjectAlpha/Assets/External Assets/Mirror - Networ/Authenticators.meta
 guid: 1b2f9d254154cd942ba40b06b869b8f3
+=======
+guid: 070c4969a86ec43d6a8eedfc34a9b4dc
+>>>>>>> origin/master:ProjectAlpha/Assets/Scripts/InputSystem.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
