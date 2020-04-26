@@ -16,6 +16,13 @@ public class GameplayContext : BaseContext
         this.gameManager = gameManager;
     }
 
+    private PlayerMovement playerMovement;
+
+    public void SetPlayer(PlayerMovement _player)
+    {
+        playerMovement = _player;
+    }
+
     /*
      * @brief Moves the player left.
      *
@@ -23,7 +30,11 @@ public class GameplayContext : BaseContext
      */
     override public void LeftButtonAction(float value)
     {
-        Debug.Log(string.Format("Player is MOVING LEFT with raw value {0}", value));
+        if(playerMovement)
+        {
+            playerMovement.SetHorizontalSpeed(value);
+        }
+        //Debug.Log(string.Format("Player is MOVING LEFT with raw value {0}", value));
     }
 
     /*
@@ -33,7 +44,11 @@ public class GameplayContext : BaseContext
      */
     override public void RightButtonAction(float value)
     {
-        Debug.Log(string.Format("Player is MOVING RIGHT with raw value {0}", value));
+        if (playerMovement)
+        {
+            playerMovement.SetHorizontalSpeed(value);
+        }
+        //Debug.Log(string.Format("Player is MOVING RIGHT with raw value {0}", value));
     }
 
     /*
@@ -61,7 +76,11 @@ public class GameplayContext : BaseContext
      */
     override public void Action1ButtonAction()
     {
-        Debug.Log("Player is JUMPING");
+        if (playerMovement)
+        {
+            playerMovement.Jump();
+        }
+        //Debug.Log("Player is JUMPING");
     }
 
     /*
@@ -69,7 +88,11 @@ public class GameplayContext : BaseContext
      */
     override public void Action2ButtonAction()
     {
-        Debug.Log("Player is DASHING");
+        if (playerMovement)
+        {
+            playerMovement.Dash();
+        }
+        //Debug.Log("Player is DASHING");
     }
 
     /*

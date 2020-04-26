@@ -1,5 +1,11 @@
-﻿using Mirror;
-using System.Collections;
+﻿/*
+ * Project Name: Project Alpha
+ *       Author: Erk
+ *         Date: 2020/04/26
+ *  Description: The class that handles the Tag System.
+ */
+
+using Mirror;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
@@ -32,13 +38,13 @@ public class TagSystem : NetworkBehaviour
     public enum GameMode { FFA, TDM };
     [SerializeField] private GameMode mode = GameMode.TDM;
 
-    List<CharacterTag> chasers = new List<CharacterTag>();
-    List<CharacterTag> targets = new List<CharacterTag>();
+    List<PlayerTag> chasers = new List<PlayerTag>();
+    List<PlayerTag> targets = new List<PlayerTag>();
 
-    CharacterTag[] GetPlayers()
+    PlayerTag[] GetPlayers()
     {
         Thread.Sleep(2000);
-        return FindObjectsOfType<CharacterTag>();
+        return FindObjectsOfType<PlayerTag>();
     }
 
     void SetCharacterTags()

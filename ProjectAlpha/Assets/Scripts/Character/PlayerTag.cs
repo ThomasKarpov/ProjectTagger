@@ -1,9 +1,14 @@
-﻿using Mirror;
-using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * Project Name: Project Alpha
+ *       Author: Erk
+ *         Date: 2020/04/26
+ *  Description: The class that handles tag interactions for each player character.
+ */
+
+using Mirror;
 using UnityEngine;
 
-public class CharacterTag : NetworkBehaviour
+public class PlayerTag : NetworkBehaviour
 {
     private bool isTarget = false;
 
@@ -13,7 +18,8 @@ public class CharacterTag : NetworkBehaviour
 
     private void Start()
     {
-        tagSystem = TagSystem.instance;
+        if(TagSystem.instance)
+            tagSystem = TagSystem.instance;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,7 +31,7 @@ public class CharacterTag : NetworkBehaviour
         // if character is chaser and other object is a character
         if (!isTarget && other.CompareTag("Player")) 
         {
-            CharacterTag otherTag = other.GetComponent<CharacterTag>();
+            PlayerTag otherTag = other.GetComponent<PlayerTag>();
             if(otherTag != null && otherTag.IsTarget)
             {
                 // TODO: Let TagSystem know otherTag has been caught.

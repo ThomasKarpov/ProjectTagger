@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8554503199901707269}
   - component: {fileID: 8554503199901707267}
-  - component: {fileID: 2143457331}
   m_Layer: 0
   m_Name: Lobby Manager
   m_TagString: Untagged
@@ -72,38 +71,3 @@ MonoBehaviour:
   NoDelay: 1
   serverMaxMessageSize: 16384
   clientMaxMessageSize: 16384
---- !u!114 &2143457331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8554503199901707266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 615e6c6589cf9e54cad646b5a11e0529, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 1
-  runInBackground: 1
-  startOnHeadless: 1
-  showDebugMessages: 0
-  serverTickRate: 30
-  offlineScene: 
-  onlineScene: 
-  transport: {fileID: 8554503199901707267}
-  networkAddress: localhost
-  maxConnections: 4
-  authenticator: {fileID: 0}
-  playerPrefab: {fileID: 0}
-  autoCreatePlayer: 1
-  playerSpawnMethod: 0
-  spawnPrefabs: []
-  showRoomGUI: 1
-  minPlayers: 1
-  roomPlayerPrefab: {fileID: 4936615791603126278, guid: 9b40adc994d82a146adbe797324cedbc,
-    type: 3}
-  RoomScene: Assets/Scenes/Erk/Lobby.unity
-  GameplayScene: Assets/Scenes/Erk/Game.unity
-  allPlayersReady: 0
-  roomSlots: []

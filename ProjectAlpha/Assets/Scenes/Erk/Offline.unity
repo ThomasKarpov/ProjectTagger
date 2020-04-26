@@ -1236,7 +1236,7 @@ PrefabInstance:
     - target: {fileID: 8554503199901707266, guid: 5c43f1eacd29b6844b0188d2eaeb8da3,
         type: 3}
       propertyPath: m_Name
-      value: Lobby Manager
+      value: Network Manager
       objectReference: {fileID: 0}
     - target: {fileID: 8554503199901707269, guid: 5c43f1eacd29b6844b0188d2eaeb8da3,
         type: 3}
@@ -1295,6 +1295,67 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c43f1eacd29b6844b0188d2eaeb8da3, type: 3}
+--- !u!1 &1163508644 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8554503199901707266, guid: 5c43f1eacd29b6844b0188d2eaeb8da3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1163508643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1163508645 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8554503199901707267, guid: 5c43f1eacd29b6844b0188d2eaeb8da3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1163508643}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163508644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7424c1070fad4ba2a7a96b02fbeb4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1163508646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163508644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6442dc8070ceb41f094e44de0bf87274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showGUI: 1
+  offsetX: 0
+  offsetY: 0
+--- !u!114 &1163508647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163508644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aab4c8111b7c411b9b92cf3dbc5bd4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 1
+  runInBackground: 1
+  startOnHeadless: 1
+  showDebugMessages: 0
+  serverTickRate: 30
+  offlineScene: Assets/Scenes/Erk/Offline.unity
+  onlineScene: Assets/Scenes/Erk/Game.unity
+  transport: {fileID: 1163508645}
+  networkAddress: localhost
+  maxConnections: 4
+  authenticator: {fileID: 0}
+  playerPrefab: {fileID: 5718001237201181342, guid: 83ce1190a9b87e5459afd6c1e136389e,
+    type: 3}
+  autoCreatePlayer: 1
+  playerSpawnMethod: 0
+  spawnPrefabs: []
 --- !u!1 &1389430721
 GameObject:
   m_ObjectHideFlags: 0

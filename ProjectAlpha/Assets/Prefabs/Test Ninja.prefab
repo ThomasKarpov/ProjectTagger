@@ -267,6 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7a0e39c1a4909d45a3c576b1447c8fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameText: {fileID: 974154115}
   target: {fileID: 0}
 --- !u!1 &109656060352551738
 GameObject:
@@ -1483,14 +1484,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8719305383220881549}
-  - component: {fileID: 4358225233306356295}
   - component: {fileID: 4358225233306356292}
   - component: {fileID: 4358225233306356289}
   - component: {fileID: 4358225233306356288}
   - component: {fileID: 4358225233306356291}
   - component: {fileID: 1295604132803274577}
-  - component: {fileID: 2072612553512624608}
   - component: {fileID: 3153651802267588118}
+  - component: {fileID: 7379146024402164540}
   m_Layer: 0
   m_Name: Test Ninja
   m_TagString: Untagged
@@ -1515,20 +1515,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!136 &4358225233306356295
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5718001237201181342}
-  m_Material: {fileID: 13400000, guid: 492d9e33d86ac464c86661bfdafea3c3, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.3
-  m_Height: 1.4
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.7, z: 0}
 --- !u!95 &4358225233306356292
 Animator:
   serializedVersion: 3
@@ -1576,7 +1562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
-  syncInterval: 0.1
+  syncInterval: 0.05
   clientAuthority: 1
   animator: {fileID: 4358225233306356292}
 --- !u!114 &4358225233306356291
@@ -1592,7 +1578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
-  syncInterval: 0.1
+  syncInterval: 0.05
   clientAuthority: 1
   localPositionSensitivity: 0.01
   localRotationSensitivity: 0.01
@@ -1608,38 +1594,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 1.4
+  m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2072612553512624608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5718001237201181342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24fd13686a451ad498101a604d134e39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  characterController: {fileID: 1295604132803274577}
-  moveSpeed: 8
-  turnSensitivity: 5
-  maxTurnSpeed: 150
-  horizontal: 0
-  vertical: 0
-  turn: 0
-  jumpSpeed: 0
-  isGrounded: 1
-  isFalling: 0
-  velocity: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.7, z: 0}
 --- !u!114 &3153651802267588118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1654,6 +1615,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+--- !u!114 &7379146024402164540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5718001237201181342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47535a10d053a1b419a312c584e76ff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 4
+  jumpHeight: 8
+  drag: {x: 15, y: 2}
+  dashDistance: 3
+  dashDuration: 0.35
+  dashCooldown: 1
+  groundCheckDist: 0.1
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &5923110668973403319
 GameObject:
   m_ObjectHideFlags: 0
