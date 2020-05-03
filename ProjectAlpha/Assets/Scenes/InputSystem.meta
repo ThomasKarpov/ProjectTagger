@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:ProjectAlpha/Assets/External Assets/Mirror - Networ.meta
+guid: c0bc6f0e2298a6e4f950b7c21acbddb9
+=======
 guid: 720b3d25cb20e4c6d988eac93c1c33df
+>>>>>>> origin/master:ProjectAlpha/Assets/Scenes/InputSystem.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

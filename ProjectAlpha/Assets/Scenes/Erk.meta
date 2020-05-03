@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: b852e8ea115938b48bc7001b7a715f00
+=======
+<<<<<<< HEAD:ProjectAlpha/Assets/External Assets.meta
+guid: 9e595bc73c9a1e143b829ad815f886aa
+=======
 guid: 9e5e2934074d1e945a85b14b9747e667
+>>>>>>> origin/master:ProjectAlpha/Assets/Scenes/Erk.meta
+>>>>>>> origin/master
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
