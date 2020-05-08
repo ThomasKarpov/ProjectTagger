@@ -1,0 +1,50 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class JoinLobbyMenu : MonoBehaviour
+{
+    [SerializeField] private LobbyManager networkManger = null;
+
+    [Header("UI")]
+    [SerializeField] private GameObject landingPagePanel = null;
+    [SerializeField] private TMP_InputField ipAddressInputField = null;
+    [SerializeField] private Button joinButton = null;
+
+    private void OnEnable()
+    {
+        LobbyManager.OnClientConnected += HandleClientConnected;
+        LobbyManager.OnClientDisconnected += HandleClientDisconnected;
+    }
+
+    private void OnDisable()
+    {
+        LobbyManager.OnClientConnected -= HandleClientConnected;
+        LobbyManager.OnClientDisconnected -= HandleClientDisconnected;
+    }
+
+    public void JoinLobby()
+    {
+        string ipAddress = ipAddressInputField.text;
+
+        networkManger.networkAddress = ipAddress;
+        networkManger.StartClient();
+
+        joinButton.interactable = false;
+    }
+
+    private void HandleClientConnected()
+    {
+        joinButton.interactable = true;
+
+        gameObject.SetActive(false);
+        landingPagePanel.SetActive(false);
+    }
+
+    private void HandleClientDisconnected()
+    {
+        joinButton.interactable = false;
+    }
+}

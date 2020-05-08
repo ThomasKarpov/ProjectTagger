@@ -1615,6 +1615,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  chaserMaterial: {fileID: 2100000, guid: 8cc0d77fceb0ec345b3e07b673502e7e, type: 2}
+  targetMaterial: {fileID: 2100000, guid: b443204dd3f1d3144b8fa88fdb7df928, type: 2}
+  mesh: {fileID: 3067592068209285409}
 --- !u!114 &7379146024402164540
 MonoBehaviour:
   m_ObjectHideFlags: 0

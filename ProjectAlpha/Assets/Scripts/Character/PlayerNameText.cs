@@ -14,20 +14,23 @@ public class PlayerNameText : MonoBehaviour
     [SerializeField] private TMP_Text nameText;
     [SerializeField] private Transform target;
     private NetworkIdentity netID;
+    private string name = "Player";
 
-    private void Start()
+    public string Name { get => name; private set => name = value; }
+
+    private void Awake()
     {
         netID = transform.root.GetComponent<NetworkIdentity>();
         if (netID && !netID.isLocalPlayer)
         {
-            nameText.text = $"Player {netID.netId}";
-            enabled = false;
+            Name = $"Player {netID.netId}";
         }
         else
         {
-            nameText.text = "You";
+            Name = "You";
         }
-
+        transform.root.name = Name;
+        nameText.text = Name;
         if (!target)
             target = Camera.main.transform;
     }

@@ -8,13 +8,19 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Erk/Offline.unity
-    guid: bb353c419e9b88241aaab5aad14ab82b
+    path: Assets/Scenes/Erk/Lobby.unity
+    guid: ccc4127f2ac9c774c8da59b27d0513c7
   - enabled: 1
     path: Assets/Scenes/Erk/Game.unity
     guid: b1156c6856b277444b008345194f2e3b
   - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+    path: Assets/Scenes/Erk/Offline.unity
+    guid: bb353c419e9b88241aaab5aad14ab82b
+  - enabled: 0
+    path: Assets/Scenes/Erk/Online.unity
+    guid: d6faa812631ee9240882905edb25eb02
   m_configObjects: {}

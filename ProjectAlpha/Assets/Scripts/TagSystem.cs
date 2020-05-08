@@ -18,11 +18,6 @@ public class TagSystem : NetworkBehaviour
 
     private void Awake()
     {
-        //if (!isServer)
-        //{
-        //    Destroy(gameObject);
-        //}
-
         if (instance == null)
         {
             instance = this;
@@ -31,43 +26,46 @@ public class TagSystem : NetworkBehaviour
         {
             Destroy(gameObject);
         }
-       
-        Invoke("SetCharacterTags", 3);
     }
 
-    public enum GameMode { FFA, TDM };
-    [SerializeField] private GameMode mode = GameMode.TDM;
+    public enum GameMode { FFA, TDM, VS };
+    [SerializeField] private GameMode mode = GameMode.VS;
 
     List<PlayerTag> chasers = new List<PlayerTag>();
     List<PlayerTag> targets = new List<PlayerTag>();
 
-    PlayerTag[] GetPlayers()
+    List<PlayerTag> playerTags = new List<PlayerTag>();
+
+    public void AddPlayer(NetworkConnection player)
     {
-        Thread.Sleep(2000);
-        return FindObjectsOfType<PlayerTag>();
+        Debug.Log($"Player: {player.connectionId} joined.");
+
+
+        //playerTags.Add(player);
+        if (mode == GameMode.VS && playerTags.Count == 2)
+        {
+            SetCharacterTagsVS();
+        }
     }
 
-    void SetCharacterTags()
-    {
-        Debug.Log("Setting character tags!");
-        var players = GetPlayers();
-        if (players.Length == 0)
-        {
-            Debug.LogError("Failed to find player tags");
-            return;
-        }
-        
-        int targetId = Random.Range(0, players.Length);
+    // TODO: Remove player from PlayerTags-list if it disconnects
 
-        for (int i = 0; i < players.Length; i++)
-        {
-             players[i].TargetSetTag(players[i].connectionToClient, i == targetId?true:false);
-        }
+
+    void SetCharacterTagsVS()
+    {
+        int targetId = Random.Range(0, playerTags.Count);
+        
+        targets.Add(playerTags[targetId]);
+        playerTags.RemoveAt(targetId);
+        chasers.Add(playerTags[0]);
+
+        targets[0].TargetSetTag(targets[0].connectionToClient, true);
+        chasers[0].TargetSetTag(chasers[0].connectionToClient, false);
     }
 
     [Command]
     public void CmdCaughtTag(uint chaser, uint target)
     {
-
+        Debug.Log($"player:{chaser} caught player:{target}");
     }
 }

@@ -10,6 +10,13 @@ using UnityEngine;
 
 public class PlayerTag : NetworkBehaviour
 {
+    [SerializeField]
+    private Material chaserMaterial;
+    [SerializeField]
+    private Material targetMaterial;
+    [SerializeField]
+    private SkinnedMeshRenderer mesh;
+
     private bool isTarget = false;
 
     public bool IsTarget { get => isTarget; private set => isTarget = value; }
@@ -19,13 +26,18 @@ public class PlayerTag : NetworkBehaviour
     private void Start()
     {
         if(TagSystem.instance)
+        {
             tagSystem = TagSystem.instance;
+
+            if(isServer)
+                tagSystem.AddPlayer(connectionToClient);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         // Only perform on local client
-        if (!isLocalPlayer)
+        if (!isServer)
             return;
 
         // if character is chaser and other object is a character
@@ -64,5 +76,14 @@ public class PlayerTag : NetworkBehaviour
     {
         Debug.Log(gameObject.name + "became a " + (_isTarget?"target!":"chaser!"));
         isTarget = _isTarget;
+
+        if (isTarget)
+        {
+            mesh.material = targetMaterial;
+        }
+        else
+        {
+            mesh.material = chaserMaterial;
+        }
     }
 }
