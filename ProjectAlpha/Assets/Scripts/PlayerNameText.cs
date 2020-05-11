@@ -28,8 +28,8 @@ public class PlayerNameText : MonoBehaviour
             nameText.text = "You";
         }
 
-        if (!target)
-            target = Camera.main.transform;
+        if (!target) { }
+            //target = Camera.main.transform;
     }
 
     void Update()
