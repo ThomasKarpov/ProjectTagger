@@ -40,3 +40,9 @@ The Maximum expected horizontal distance between the 2 players.
 
 __NOTE:__ If the distance between the players is greater than the specified value, 
 the players will no longer be visible on the camera view.
+
+## Demo Scene
+
+The demo scene has a platform and tow capsules representing players. The 
+players are meant to be moved through the scene view in order to see the 
+camera script at work.
