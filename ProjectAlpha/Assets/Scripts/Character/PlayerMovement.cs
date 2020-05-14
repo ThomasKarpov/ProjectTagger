@@ -8,7 +8,7 @@
 using Mirror;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : NetworkBehaviour
 {
     [Header("Movement")]
     [Tooltip("The max horizontal speed when running")]
@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpHeight = 5f;
     [Tooltip("The amount the speed is reduced per axis over time")]
     [SerializeField] private Vector2 drag = new Vector2(0.25f, 0.4f);
+    [Tooltip("The specifies the gravity on the Y-axis, should be a negative value.")]
+    [SerializeField] private float gravity = -15f;
 
     [Header("Dash Settings")]
     [Tooltip("The max distance to travel on a dash")]
@@ -34,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("Specifies which layers should be seen as 'ground' for the player.")]
 
     // Floats
-    private const float GRAVITY = -15f;
+   
     private float dashCooldownTimer = 0;
     private float dashTimer = 0;
 
@@ -42,7 +44,6 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController cc;
     private Vector3 moveDirection;
     private Animator anim;
-    private NetworkIdentity netID;
     
     // Bools
     private bool isGrounded;
@@ -51,17 +52,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        netID = GetComponent<NetworkIdentity>();
-        if (!netID.isLocalPlayer)
-        {
-            enabled = false;
-        }
-        else
-        {
-            cc = GetComponent<CharacterController>();
-            anim = GetComponent<Animator>();
-            FindObjectOfType<GameplayContext>().SetPlayer(this);
-        }
+        cc = GetComponent<CharacterController>();
+        anim = GetComponent<Animator>();
+        FindObjectOfType<GameplayContext>().SetPlayer(this);
+    }
+
+    public override void OnStartAuthority()
+    {
+        enabled = true;
     }
 
     void Update()
@@ -81,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else // Apply gravity
         {
-            moveDirection.y += GRAVITY * Time.deltaTime;
+            moveDirection.y += gravity * Time.deltaTime;
         }
 
         moveDirection.z = 0;
