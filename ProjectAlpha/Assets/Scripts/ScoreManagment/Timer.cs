@@ -9,6 +9,8 @@ public class Timer : MonoBehaviour
     [SerializeField]
     private Text _displayedTime=null;
 
+    [Tooltip("Time the game runs in seconds")]
+    [SerializeField]
     private float _roundLength = 5;
 
     public delegate void TimeSpent();
