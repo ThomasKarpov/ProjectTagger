@@ -122,75 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &991254782
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2097948808830184350, guid: 89e90b715611ea347bd7e0d3e8964f4c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2097948808830184350, guid: 89e90b715611ea347bd7e0d3e8964f4c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2097948808830184350, guid: 89e90b715611ea347bd7e0d3e8964f4c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2097948808830184350, guid: 89e90b715611ea347bd7e0d3e8964f4c,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2097948808830184350, guid: 89e90b715611ea347bd7e0d3e8964f4c,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2097948808830184350, guid: 89e90b715611ea347bd7e0d3e8964f4c,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2097948808830184350, guid: 89e90b715611ea347bd7e0d3e8964f4c,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2097948808830184350, guid: 89e90b715611ea347bd7e0d3e8964f4c,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2097948808830184350, guid: 89e90b715611ea347bd7e0d3e8964f4c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2097948808830184350, guid: 89e90b715611ea347bd7e0d3e8964f4c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2097948808830184350, guid: 89e90b715611ea347bd7e0d3e8964f4c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3118233167384811917, guid: 89e90b715611ea347bd7e0d3e8964f4c,
-        type: 3}
-      propertyPath: m_Name
-      value: Neon Panther
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 89e90b715611ea347bd7e0d3e8964f4c, type: 3}
 --- !u!1 &1258134812
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,3 +498,94 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 182.018, y: 65.56799, z: -5.96698}
+--- !u!1001 &3064877983005760613
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 536479628717510065, guid: 89e90b715611ea347bd7e0d3e8964f4c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 536479628717510065, guid: 89e90b715611ea347bd7e0d3e8964f4c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 536479628717510065, guid: 89e90b715611ea347bd7e0d3e8964f4c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 536479628717510065, guid: 89e90b715611ea347bd7e0d3e8964f4c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 536479628717510065, guid: 89e90b715611ea347bd7e0d3e8964f4c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 536479628717510065, guid: 89e90b715611ea347bd7e0d3e8964f4c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 536479628717510065, guid: 89e90b715611ea347bd7e0d3e8964f4c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 536479628717510065, guid: 89e90b715611ea347bd7e0d3e8964f4c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 536479628717510065, guid: 89e90b715611ea347bd7e0d3e8964f4c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 536479628717510065, guid: 89e90b715611ea347bd7e0d3e8964f4c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 536479628717510065, guid: 89e90b715611ea347bd7e0d3e8964f4c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3542833970358402978, guid: 89e90b715611ea347bd7e0d3e8964f4c,
+        type: 3}
+      propertyPath: m_Name
+      value: Neon Panther
+      objectReference: {fileID: 0}
+    - target: {fileID: 7636968764166398155, guid: 89e90b715611ea347bd7e0d3e8964f4c,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 45c2b73fc68bae04f95f85641f1765bd, type: 2}
+    - target: {fileID: 7636968764166398155, guid: 89e90b715611ea347bd7e0d3e8964f4c,
+        type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'metarig'\n\tTransform 'f_middle.02.R'\n\tTransform
+        'forearm.R'\n\tTransform 'f_middle.01.R'\n\tTransform 'shoulder.R'\n\tTransform
+        'thigh.L'\n\tTransform 'thumb.02.R'\n\tTransform 'f_pinky.01.L'\n\tTransform
+        'upper_arm.L'\n\tTransform 'spine.006'\n\tand more ...\n\tFrom animation
+        clip 'mixamo.com'\n\tFrom animation clip 'mixamo.com'\n\tFrom animation clip
+        'mixamo.com'"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7636968764166398155, guid: 89e90b715611ea347bd7e0d3e8964f4c,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89e90b715611ea347bd7e0d3e8964f4c, type: 3}
