@@ -1,4 +1,4 @@
-# ProjectAlpha
+# Project Tagger
 - Game Engine: `Unity 2019.3.7f1`
 - Programming language: `C#`
 - Project Source Control: `GitHub`
