@@ -1,42 +1,33 @@
 ﻿/*
  * Project Name: Project Alpha
- *       Author: Erk
- *         Date: 2020/04/26
+ *       Author: A variaton of Erk's script, modified to not include networking.
+
  *  Description: The class that handles the movement logic of the player character.
  */
 
-using Mirror;
+
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : NetworkBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-    [Header("Movement")]
-    [Tooltip("The max horizontal speed when running")]
-    [SerializeField] private float moveSpeed = 3f;
-    [Tooltip("The max vertical height to reach when jumping")]
-    [SerializeField] private float jumpHeight = 5f;
-    [Tooltip("The amount the speed is reduced per axis over time")]
-    [SerializeField] private Vector2 drag = new Vector2(0.25f, 0.4f);
-    [Tooltip("The specifies the gravity on the Y-axis, should be a negative value.")]
-    [SerializeField] private float gravity = -20f;
+    public float moveSpeed = 3f;
+    public float jumpHeight = 5f;
+    public Vector2 drag = new Vector2(0.25f, 0.4f);
+    public float gravity = -20f;
 
-    [Header("Dash Settings")]
-    [Tooltip("The max distance to travel on a dash")]
-    [SerializeField] private float dashDistance = 5f;
-    [Tooltip("The duration a dash lasts. Horizontal input is ignored during this time.")]
-    [SerializeField] private float dashDuration = 1f;
-    [Tooltip("Cooldown for how often a dash can be performed")]
-    [SerializeField] private float dashCooldown = 1f;
 
-    [Header("Other")]
-    [Tooltip("The distance to check for ground from players position")]
-    [SerializeField] private float groundCheckDist = 1f;
-    [Tooltip("Specifies which layers should be seen as 'ground' for the player.")]
-    [SerializeField] private LayerMask groundMask;
-    [Tooltip("Specifies which layers should be seen as 'ground' for the player.")]
+    public float dashDistance = 5f;
+    public float dashCooldown = 1f;
+    public float dashDuration = 1f;
+
+
+    public float groundCheckDist = 1f;
+    public LayerMask groundMask;
 
     // Floats
-   
+
     private float dashCooldownTimer = 0;
     private float dashTimer = 0;
 
@@ -44,36 +35,33 @@ public class PlayerMovement : NetworkBehaviour
     private CharacterController cc;
     private Vector3 moveDirection;
     private Animator anim;
-    
+
     // Bools
     private bool isGrounded;
     private bool isFacingRight = true;
     private bool isDashing;
+
 
     void Start()
     {
         cc = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         FindObjectOfType<GameplayContext>().SetPlayer(this);
-    }
 
-    public override void OnStartAuthority()
-    {
-        enabled = true;
     }
 
     void Update()
     {
-        isGrounded = Physics.Linecast(transform.position + new Vector3(0,0.25f,0), new Vector2(transform.position.x, transform.position.y - groundCheckDist), groundMask);
+        isGrounded = Physics.Linecast(transform.position + new Vector3(0, 0.25f, 0), new Vector2(transform.position.x, transform.position.y - groundCheckDist), groundMask);
         anim.SetBool("Grounded", isGrounded);
-        Debug.DrawLine(transform.position, new Vector2(transform.position.x, transform.position.y - 0.5f), isGrounded?Color.green:Color.red);
+        Debug.DrawLine(transform.position, new Vector2(transform.position.x, transform.position.y - 0.5f), isGrounded ? Color.green : Color.red);
 
         DashTimers();
     }
 
     private void FixedUpdate()
     {
-        if(isGrounded && moveDirection.y < 0)
+        if (isGrounded && moveDirection.y < 0)
         {
             moveDirection.y = 0;
         }
@@ -142,7 +130,7 @@ public class PlayerMovement : NetworkBehaviour
     void Flip()
     {
         isFacingRight = !isFacingRight;
-        transform.rotation = Quaternion.Euler(0, isFacingRight?90:-90, 0);
+        transform.rotation = Quaternion.Euler(0, isFacingRight ? 90 : -90, 0);
     }
 
     /// <summary>
@@ -153,7 +141,7 @@ public class PlayerMovement : NetworkBehaviour
     public void SetHorizontalSpeed(float input)
     {
         if (isDashing)
-            return; 
+            return;
         float newSpeed = moveDirection.x + input;
         moveDirection.x = Mathf.Clamp(newSpeed, -moveSpeed, moveSpeed);
     }
@@ -190,6 +178,5 @@ public class PlayerMovement : NetworkBehaviour
         dashTimer = dashDuration;
         dashCooldownTimer = dashCooldown;
 
-        // TODO: Add dash effect? After images? Trail? Particles?
     }
 }

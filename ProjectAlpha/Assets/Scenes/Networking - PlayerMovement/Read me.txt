@@ -1,4 +1,0 @@
-These scenes contain the example for how the networking works along with 
-a player prefab that moves using the player movement and Input system.
-
-Add them to the build settings with the offline scene as the first. You can then build the project and try it out.
