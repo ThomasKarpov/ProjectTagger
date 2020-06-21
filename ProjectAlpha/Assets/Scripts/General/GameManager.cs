@@ -6,6 +6,7 @@
  *               input system.
  */
 
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -17,6 +18,12 @@ public class GameManager : MonoBehaviour
     public ContextManager contextManager;
     public GameplayContext gameplayContext;
     public MenuContext menuContext;
+
+    public List<PlayerData> playerList;
+    bool enableDecideWinner;
+    bool startTimer;
+    public double gameMaxTimer = 1f;
+    double gameCurrentTimer;
 
     Dictionary<string, BaseContext> contextDispenser;
     bool menuToggle;
@@ -30,6 +37,28 @@ public class GameManager : MonoBehaviour
             { "gameplay", gameplayContext },
             { "menu", menuContext }
         };
+
+        if (playerList.Count < 2)
+        {
+            Debug.LogException(new Exception("playerList List does not have a minimum of 2 players."));
+        }
+
+        startTimer = true;
+        gameCurrentTimer = gameMaxTimer;
+    }
+
+    private void Update()
+    {
+        if (startTimer && gameCurrentTimer > 0f)
+        {
+            gameCurrentTimer -= Time.deltaTime;
+        }
+        if (gameCurrentTimer <= 0f)
+        {
+            enableDecideWinner = true;
+            gameCurrentTimer = gameMaxTimer;
+            startTimer = false;
+        }
     }
 
     /*
@@ -48,6 +77,20 @@ public class GameManager : MonoBehaviour
         {
             contextManager.currentContext = contextDispenser["gameplay"];
             Debug.Log("Switched context to \"gameplay\"");
+        }    
+    }
+
+    public void DecideWinner()
+    {
+        if (enableDecideWinner)
+        {
+            foreach (PlayerData player in playerList)
+            {
+                if (player.role == PlayerRole.CHASER)
+                {
+                    Debug.Log("GAME ENDED: " + EnumHelpers.AssignmentToString(player.assignment) + " wins!");
+                }
+            }
         }
         
     }

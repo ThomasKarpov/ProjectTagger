@@ -1,8 +1,10 @@
 ﻿<Properties StartupConfiguration="{CC05ABDD-116D-B2EF-1085-8FFFB78D8259}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TagSystem/PlayerEvents.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/InputSystem/Demo/GameManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/TagSystem/PlayerOrder.cs" Line="16" Column="10" />
-      <File FileName="Assets/Scripts/TagSystem/PlayerEvents.cs" Line="5" Column="55" />
+      <File FileName="Assets/Scripts/TagSystem/PlayerData.cs" Line="6" Column="2" />
+      <File FileName="Assets/Scripts/TagSystem/TagSystemEnums.cs" Line="32" Column="1" />
+      <File FileName="Assets/Scripts/TagSystem/PlayerGameState.cs" Line="18" Column="1" />
+      <File FileName="Assets/Scripts/InputSystem/Demo/GameManager.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,8 +13,12 @@
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="CameraSystem" expanded="True" />
-                <Node name="InputSystem" expanded="True" />
-                <Node name="ScoreManagment" selected="True" />
+                <Node name="InputSystem" expanded="True">
+                  <Node name="Demo" expanded="True">
+                    <Node name="GameManager.cs" selected="True" />
+                  </Node>
+                </Node>
+                <Node name="TagSystem" expanded="True" />
               </Node>
             </Node>
           </Node>
