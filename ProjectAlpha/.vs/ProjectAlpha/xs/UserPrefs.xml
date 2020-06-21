@@ -12,7 +12,7 @@
               <Node name="Scripts" expanded="True">
                 <Node name="CameraSystem" expanded="True" />
                 <Node name="InputSystem" expanded="True" />
-                <Node name="TagSystem" selected="True" />
+                <Node name="ScoreManagment" selected="True" />
               </Node>
             </Node>
           </Node>
