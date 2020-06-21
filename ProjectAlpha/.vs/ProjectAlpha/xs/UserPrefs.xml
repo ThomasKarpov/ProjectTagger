@@ -1,13 +1,10 @@
 ﻿<Properties StartupConfiguration="{CC05ABDD-116D-B2EF-1085-8FFFB78D8259}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/InputSystem/Events.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/InputSystem/Demo/GameManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/InputSystem/GameManager.cs" Line="2" Column="1" />
-      <File FileName="Assets/Scripts/InputSystem/BaseContext.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/InputSystem/ContextManager.cs" Line="7" Column="26" />
-      <File FileName="Assets/Scripts/InputSystem/GameplayContext.cs" Line="5" Column="61" />
-      <File FileName="Assets/Scripts/InputSystem/MenuContext.cs" Line="5" Column="56" />
-      <File FileName="Assets/Scripts/InputSystem/InputMonitor.cs" Line="6" Column="30" />
-      <File FileName="Assets/Scripts/InputSystem/Events.cs" Line="5" Column="22" />
+      <File FileName="Assets/Scripts/TagSystem/PlayerData.cs" Line="6" Column="2" />
+      <File FileName="Assets/Scripts/TagSystem/TagSystemEnums.cs" Line="32" Column="1" />
+      <File FileName="Assets/Scripts/TagSystem/PlayerGameState.cs" Line="18" Column="1" />
+      <File FileName="Assets/Scripts/InputSystem/Demo/GameManager.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,9 +12,13 @@
           <Node name="ProjectAlpha" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
+                <Node name="CameraSystem" expanded="True" />
                 <Node name="InputSystem" expanded="True">
-                  <Node name="Events.cs" selected="True" />
+                  <Node name="Demo" expanded="True">
+                    <Node name="GameManager.cs" selected="True" />
+                  </Node>
                 </Node>
+                <Node name="TagSystem" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -27,7 +28,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c3e29243-ec02-46ed-90ea-5d4c9b08f310" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e71afaca-98eb-480c-891b-96447df3428d" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
