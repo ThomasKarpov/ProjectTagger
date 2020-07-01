@@ -124,6 +124,7 @@
               <e p="Pong" t="Include">
                 <e p="Scripts" t="Include">
                   <e p="Ball.cs" t="Include" />
+                  <e p="NetworkManagerPong.cs" t="Include" />
                   <e p="Player.cs" t="Include" />
                 </e>
               </e>
@@ -262,14 +263,37 @@
             </e>
             <e p="version.txt" t="Include" />
           </e>
+          <e p="TextMesh Pro" t="Include">
+            <e p="Fonts" t="Include">
+              <e p="LiberationSans - OFL.txt" t="Include" />
+            </e>
+            <e p="Resources" t="Include">
+              <e p="LineBreaking Following Characters.txt" t="Include" />
+              <e p="LineBreaking Leading Characters.txt" t="Include" />
+              <e p="Shaders" t="Include">
+                <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+                <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+                <e p="TMP_Bitmap.shader" t="Include" />
+                <e p="TMP_SDF Overlay.shader" t="Include" />
+                <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+                <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+                <e p="TMP_SDF-Mobile.shader" t="Include" />
+                <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+                <e p="TMP_SDF-Surface.shader" t="Include" />
+                <e p="TMP_SDF.shader" t="Include" />
+                <e p="TMP_Sprite.shader" t="Include" />
+                <e p="TMPro.cginc" t="Include" />
+                <e p="TMPro_Properties.cginc" t="Include" />
+                <e p="TMPro_Surface.cginc" t="Include" />
+              </e>
+            </e>
+            <e p="Sprites" t="Include">
+              <e p="EmojiOne Attribution.txt" t="Include" />
+            </e>
+          </e>
         </e>
         <e p="Prefabs" t="Include">
           <e p="readme.txt" t="Include" />
-        </e>
-        <e p="Scenes" t="Include">
-          <e p="Networking - PlayerMovement" t="Include">
-            <e p="Read me.txt" t="Include" />
-          </e>
         </e>
         <e p="Scripts" t="Include">
           <e p="Audio" t="Include">
@@ -282,69 +306,54 @@
             <e p="GameCamera.cs" t="Include" />
           </e>
           <e p="Character" t="Include">
-            <e p="CharacterMovement.cs" t="Include" />
+            <e p="PlayerMovement.cs" t="Include" />
+            <e p="PlayerTag.cs" t="Include" />
           </e>
-          <e p="Networking" t="Include">
-            <e p="TagNetworkManager.cs" t="Include" />
+          <e p="General" t="Include">
+            <e p="GameManager.cs" t="Include" />
           </e>
-          <e p="readme.txt" t="Include" />
+          <e p="InputSystem" t="Include">
+            <e p="BaseContext.cs" t="Include" />
+            <e p="ContextManager.cs" t="Include" />
+            <e p="Demo" t="Include">
+              <e p="GameplayContext.cs" t="Include" />
+              <e p="MenuContext.cs" t="Include" />
+            </e>
+            <e p="Events.cs" t="Include" />
+            <e p="InputMonitor.cs" t="Include" />
+          </e>
+          <e p="LegacyNetworkingStuff" t="Include">
+            <e p="PlayerNameText.cs" t="Include" />
+            <e p="readme.txt" t="Include" />
+            <e p="TagSystem.cs" t="Include" />
+          </e>
           <e p="ScoreManagment" t="Include">
             <e p="ScoreManager.cs" t="Include" />
             <e p="Timer.cs" t="Include" />
             <e p="UIScoreManager.cs" t="Include" />
           </e>
-        </e>
-        <e p="ScriptTemplates" t="Include">
-          <e p="50-Mirror__Network Manager-NewNetworkManager.cs.txt" t="Include" />
-          <e p="51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" t="Include" />
-          <e p="52-Mirror__Network Behaviour-NewNetworkBehaviour.cs.txt" t="Include" />
-          <e p="53-Mirror__Network Observer-NewNetworkObserver.cs.txt" t="Include" />
-          <e p="54-Mirror__Network Room Manager-NewNetworkRoomManager.cs.txt" t="Include" />
-          <e p="55-Mirror__Network Room Player-NewNetworkRoomPlayer.cs.txt" t="Include" />
-          <e p="56-Mirror__Network Discovery-NewNetworkDiscovery.cs.txt" t="Include" />
+          <e p="TagSystem" t="Include">
+            <e p="PlayerData.cs" t="Include" />
+            <e p="PlayerGameState.cs" t="Include" />
+            <e p="TagSystemEnums.cs" t="Include" />
+          </e>
+          <e p="UI" t="Include">
+            <e p="MainMenu.cs" t="Include" />
+          </e>
         </e>
         <e p="Sound" t="Include">
           <e p="Music" t="Include">
             <e p="readme.txt" t="Include" />
           </e>
-          <e p="SFX" t="Include">
-            <e p="readme.txt" t="Include" />
-          </e>
-        </e>
-        <e p="TextMesh Pro" t="Include">
-          <e p="Fonts" t="Include">
-            <e p="LiberationSans - OFL.txt" t="Include" />
-          </e>
-          <e p="Resources" t="Include">
-            <e p="LineBreaking Following Characters.txt" t="Include" />
-            <e p="LineBreaking Leading Characters.txt" t="Include" />
-            <e p="Shaders" t="Include">
-              <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
-              <e p="TMP_Bitmap-Mobile.shader" t="Include" />
-              <e p="TMP_Bitmap.shader" t="Include" />
-              <e p="TMP_SDF Overlay.shader" t="Include" />
-              <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
-              <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
-              <e p="TMP_SDF-Mobile.shader" t="Include" />
-              <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
-              <e p="TMP_SDF-Surface.shader" t="Include" />
-              <e p="TMP_SDF.shader" t="Include" />
-              <e p="TMP_Sprite.shader" t="Include" />
-              <e p="TMPro.cginc" t="Include" />
-              <e p="TMPro_Properties.cginc" t="Include" />
-              <e p="TMPro_Surface.cginc" t="Include" />
-            </e>
-          </e>
-          <e p="Sprites" t="Include">
-            <e p="EmojiOne Attribution.txt" t="Include" />
-          </e>
         </e>
         <e p="Visual" t="Include">
-          <e p="2D Assets" t="Include">
-            <e p="readme.txt" t="Include" />
-          </e>
           <e p="Fonts" t="Include">
             <e p="readme.txt" t="Include" />
+          </e>
+          <e p="VFX" t="Include">
+            <e p="Particle Standard Unlit-NoFog.shader" t="Include" />
+            <e p="Unlit-Color-Transparent.shader" t="Include" />
+            <e p="Unlit-NoFog.shader" t="Include" />
           </e>
         </e>
       </e>

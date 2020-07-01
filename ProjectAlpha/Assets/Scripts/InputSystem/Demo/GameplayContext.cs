@@ -9,7 +9,7 @@ using UnityEngine;
 
 public class GameplayContext : BaseContext
 {
-    public GameManager gameManager;
+    private readonly GameManager gameManager;
 
     public GameplayContext(GameManager gameManager)
     {

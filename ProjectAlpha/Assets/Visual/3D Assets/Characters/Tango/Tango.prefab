@@ -1749,9 +1749,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5165221002194625118}
   - component: {fileID: 2964651560864714532}
-  - component: {fileID: 4362816059644572410}
-  - component: {fileID: 8125207056071287922}
   - component: {fileID: 2746947766195232115}
+  - component: {fileID: 3542833971499249760}
+  - component: {fileID: 3542833971499249763}
+  - component: {fileID: 3542833971499249759}
   m_Layer: 0
   m_Name: Tango
   m_TagString: Untagged
@@ -1768,7 +1769,7 @@ Transform:
   m_GameObject: {fileID: 8211703667425038413}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.47413492, y: 0.47413492, z: 0.47413492}
   m_Children:
   - {fileID: -4431429744085825124}
   - {fileID: -353915692346108897}
@@ -1788,43 +1789,12 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 04b741783b3dfe648bb4e2978052cf5f, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!143 &4362816059644572410
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8211703667425038413}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 1.77
-  m_Radius: 0.29
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.9, z: 0}
---- !u!65 &8125207056071287922
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8211703667425038413}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.3, y: 1.3, z: 1.3}
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &2746947766195232115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1845,6 +1815,60 @@ MonoBehaviour:
   dashCooldown: 2
   dashDuration: 0.1
   groundCheckDist: 7.2
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!143 &3542833971499249760
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8211703667425038413}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1.77
+  m_Radius: 0.29
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!65 &3542833971499249763
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8211703667425038413}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3, y: 1.3, z: 1.3}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &3542833971499249759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8211703667425038413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ee293c3db86d9044956a79a77d6e922, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 11.77
+  jumpHeight: 22.49
+  drag: {x: 7.28, y: 4.6}
+  gravity: -21.06
+  dashDistance: 3.2
+  dashCooldown: 1.17
+  dashDuration: 0.28
+  groundCheckDist: 3.77
   groundMask:
     serializedVersion: 2
     m_Bits: 256
