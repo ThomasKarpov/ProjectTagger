@@ -32,9 +32,9 @@ public class PlayerMovement : MonoBehaviour
     private float dashTimer = 0;
 
     // Components
-    private CharacterController cc;
+    private CharacterController characterController;
     private Vector3 moveDirection;
-    private Animator anim;
+    private Animator animator;
 
     // Bools
     private bool isGrounded;
@@ -42,19 +42,18 @@ public class PlayerMovement : MonoBehaviour
     private bool isDashing;
 
 
-    void Start()
+    private void Start()
     {
-        cc = GetComponent<CharacterController>();
-        anim = GetComponent<Animator>();
+        characterController = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
         FindObjectOfType<GameplayContext>().SetPlayer(this);
 
     }
 
-    void Update()
+    private void Update()
     {
-        isGrounded = Physics.Linecast(transform.position + new Vector3(0, 0.25f, 0), new Vector2(transform.position.x, transform.position.y - groundCheckDist), groundMask);
-        anim.SetBool("Grounded", isGrounded);
-        Debug.DrawLine(transform.position, new Vector2(transform.position.x, transform.position.y - 0.5f), isGrounded ? Color.green : Color.red);
+        isGrounded = characterController.isGrounded;
+        animator.SetBool("Grounded", isGrounded);
 
         DashTimers();
     }
@@ -78,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
     /// <summary>
     /// All dash related timers are updated here.
     /// </summary>
-    void DashTimers()
+    private void DashTimers()
     {
         if (dashTimer > 0)
         {
@@ -99,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
     /// Adds vertical and horizontal drag to the movement.
     /// This is used to simulate air/ground resistance.
     /// </summary>
-    void AddDrag()
+    private void AddDrag()
     {
         moveDirection.x /= 1 + drag.x * Time.deltaTime;
         moveDirection.y /= 1 + drag.y * Time.deltaTime;
@@ -110,9 +109,9 @@ public class PlayerMovement : MonoBehaviour
     /// Flips the player if necessary
     /// Sets the speed for the animator
     /// </summary>
-    void MoveCharacter()
+    private void MoveCharacter()
     {
-        cc.Move(moveDirection * Time.deltaTime);
+        characterController.Move(moveDirection * Time.deltaTime);
 
         if ((moveDirection.x > 0 && !isFacingRight) ||
             (moveDirection.x < 0 && isFacingRight))
@@ -120,14 +119,14 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
 
-        anim.SetFloat("Speed", Mathf.Abs(moveDirection.x) / moveSpeed);
+        animator.SetFloat("Speed", Mathf.Abs(moveDirection.x) / moveSpeed);
     }
 
     /// <summary>
     /// Flips the character so it faces the correct direction.
     /// This is based on the players horizontal movement speed.
     /// </summary>
-    void Flip()
+    private void Flip()
     {
         isFacingRight = !isFacingRight;
         transform.rotation = Quaternion.Euler(0, isFacingRight ? 90 : -90, 0);
@@ -156,7 +155,7 @@ public class PlayerMovement : MonoBehaviour
         if (!isGrounded)
             return;
 
-        anim.SetTrigger("Jump");
+        animator.SetTrigger("Jump");
         moveDirection.y += jumpHeight;
     }
 
