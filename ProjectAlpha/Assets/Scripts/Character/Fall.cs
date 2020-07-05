@@ -31,7 +31,7 @@ public class Fall : MonoBehaviour
         {
             if (Input.GetKeyDown("space"))
             {
-                SceneManager.LoadScene("Prototype 1");
+                SceneManager.LoadScene(1);
             }
 
         }

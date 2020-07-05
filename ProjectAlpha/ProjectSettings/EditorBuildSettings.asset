@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Prototype/Main Menu.unity
     guid: 142ec886a148a73488c1515fd18f25ed
   - enabled: 1
-    path: Assets/Scenes/Prototype/Prototype 1.unity
+    path: Assets/Scenes/Prototype/Arena 1.unity
     guid: 4c30085e619fc7049b2b60a890231a75
   m_configObjects: {}
